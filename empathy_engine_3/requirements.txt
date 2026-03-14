@@ -1,0 +1,22 @@
+# Empathy Engine — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core ML / Emotion Detection ──────────────────────────────────────────────
+transformers>=4.40.0
+torch>=2.0.0            # CPU-only is fine: pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# ── TTS Backends (choose what you need) ──────────────────────────────────────
+gtts>=2.5.0             # Free, no API key needed (default backend)
+pydub>=0.25.0           # Audio post-processing (rate/volume via gTTS)
+
+# Optional: Google Cloud TTS (uncomment if using --backend google)
+# google-cloud-texttospeech>=2.16.0
+
+# Optional: ElevenLabs (uncomment if using --backend elevenlabs)
+# requests>=2.31.0
+
+# ── Web Interface ─────────────────────────────────────────────────────────────
+flask>=3.0.0
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=8.0.0
